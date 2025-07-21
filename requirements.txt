@@ -77,4 +77,4 @@ wrapt==1.14.1
 yarl==1.18.3
 joblib
 lifelines==0.27.8
-sklearn
+scikit-learn==1.4.1.post1
