@@ -43,6 +43,9 @@ st.markdown(
     .stRadio > p {
         coloc: #fff
     }
+    .st-emotion-cache-11v6ept p {
+        color: #fff
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -114,7 +117,8 @@ elif menu == "Prédiction":
     with st.form("formulaire_survie"):
         col1, col2 = st.columns(2)
         with col1:
-            age = st.slider("Âge du patient", 38, 90, 60, help="Âge en années révolues.")
+            #age = st.slider("Âge du patient", 38, 90, 60, help="Âge en années révolues.")
+            age = st.number_input("Âge du patient", min_value=38.0, max_value=90.0, value=60.0, format="%.1f", step=0.1, help="Âge en années révolues.")
             poids = st.number_input("Poids (kg)", min_value=30.0, max_value=200.0, value=70.0, format="%.1f", step=0.1, help="Poids du patient en kilogrammes.")
         with col2:
             tumor_stage = st.selectbox(
